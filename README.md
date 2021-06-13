@@ -26,6 +26,9 @@ Social media share buttons for your next React apps.
   * Livejournal
   * Workplace
   * Pocket
+  * Instapaper
+  * Hatena
+  * FacebookMessenger
 
 ## 🔧 Install
 
@@ -284,6 +287,54 @@ import {
 >
   <PocketIcon size={32} round />
 </PocketShareButton>
+```
+
+### 🎀 Instapaper
+
+```js
+import {
+  InstapaperShareButton,
+  InstapaperIcon,
+} from 'next-share'
+
+<InstapaperShareButton
+  url={'https://github.com/next-share'}
+  title={'Next Share'}
+>
+  <InstapaperIcon size={32} round />
+</InstapaperShareButton>
+```
+
+### 🎀 Hatena
+
+```js
+import {
+  HatenaShareButton,
+  HatenaIcon,
+} from 'next-share'
+
+<HatenaShareButton
+  url={'https://github.com/next-share'}
+  title={'Next Share'}
+>
+  <HatenaIcon size={32} round />
+</HatenaShareButton>
+```
+
+### 🎀 FacebookMessenger
+
+```js
+import {
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+} from 'next-share'
+
+<FacebookMessengerShareButton
+  url={'https://github.com/next-share'}
+  appId={''}
+>
+  <FacebookMessengerIcon size={32} round />
+</FacebookMessengerShareButton>
 ```
 
 ## 📚 Icons Documentation
@@ -1152,6 +1203,168 @@ import {
     <td>Title of the shared page. Note that if Pocket detects a title tag on the page being saved, this parameter will be ignored and the title tag of the saved page will be used instead.</td>
     <td>❌</td>
   </tr>
+  <tr>
+    <td>windowWidth</td>
+    <td>number</td>
+    <td>550</td>
+    <td>Opened window width.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>windowHeight</td>
+    <td>number</td>
+    <td>400</td>
+    <td>Opened window height.</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+### 📖 InstapaperShareButton Props
+
+<table>
+  <tr>
+    <th>Props</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+    <th>Required</th>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td>React node</td>
+    <td></td>
+    <td>React component, HTML element or string.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>string</td>
+    <td></td>
+    <td>The URL of the shared page.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>string</td>
+    <td></td>
+    <td>Title of the shared page.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>description</td>
+    <td>string</td>
+    <td></td>
+    <td>Description of the shared page.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>windowWidth</td>
+    <td>number</td>
+    <td>550</td>
+    <td>Opened window width.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>windowHeight</td>
+    <td>number</td>
+    <td>400</td>
+    <td>Opened window height.</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+### 📖 HatenaShareButton Props
+
+<table>
+  <tr>
+    <th>Props</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+    <th>Required</th>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td>React node</td>
+    <td></td>
+    <td>React component, HTML element or string.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>string</td>
+    <td></td>
+    <td>The URL of the shared page.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td>string</td>
+    <td></td>
+    <td>Title of the shared page.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>windowWidth</td>
+    <td>number</td>
+    <td>550</td>
+    <td>Opened window width.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>windowHeight</td>
+    <td>number</td>
+    <td>400</td>
+    <td>Opened window height.</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+### 📖 FacebookMessengerShareButton Props
+
+<table>
+  <tr>
+    <th>Props</th>
+    <th>Type</th>
+    <th>Default</th>
+    <th>Description</th>
+    <th>Required</th>
+  </tr>
+  <tr>
+    <td>children</td>
+    <td>React node</td>
+    <td></td>
+    <td>React component, HTML element or string.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>url</td>
+    <td>string</td>
+    <td></td>
+    <td>The URL of the shared page.</td>
+    <td>✅</td>
+  </tr>
+  <tr>
+    <td>appId</td>
+    <td>string</td>
+    <td></td>
+    <td>Facebook application id.</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>redirectUri</td>
+    <td>string</td>
+    <td></td>
+    <td>The URL to redirect to after sharing (default: the shared url).</td>
+    <td>❌</td>
+  </tr>
+  <tr>
+    <td>to</td>
+    <td>string</td>
+    <td></td>
+    <td>A user ID of a recipient. Once the dialog comes up, the sender can specify additional people as recipients.</td>
+    <td>❌</td>
+  </tr>FacebookMessenger
   <tr>
     <td>windowWidth</td>
     <td>number</td>
