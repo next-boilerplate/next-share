@@ -32,6 +32,14 @@ import {
   WorkplaceIcon,
   PocketShareButton,
   PocketIcon,
+  InstapaperShareButton,
+  InstapaperIcon,
+  HatenaShareButton,
+  HatenaIcon,
+  FacebookMessengerShareButton,
+  FacebookMessengerIcon,
+  EmailShareButton,
+  EmailIcon,
 } from 'next-share'
 
 function App() {
@@ -172,6 +180,41 @@ function App() {
           <PocketIcon size={32} round />
         </div>
       </PocketShareButton>
+      <InstapaperShareButton
+        url={'https://github.com/next-share'}
+        title={'Next Share'}
+      >
+        <div style={{marginRight: 10, width: 32, height: 32}}>
+          <InstapaperIcon size={32} round />
+        </div>
+      </InstapaperShareButton>
+      <HatenaShareButton
+        url={'https://github.com/next-share'}
+        title={'Next Share'}
+        windowWidth={660}
+        windowHeight={460}
+      >
+        <div style={{marginRight: 10, width: 32, height: 32}}>
+          <HatenaIcon size={32} round />
+        </div>
+      </HatenaShareButton>
+      <FacebookMessengerShareButton
+        url={'https://github.com/next-share'}
+        appId={''}
+      >
+        <div style={{marginRight: 10, width: 32, height: 32}}>
+          <FacebookMessengerIcon size={32} round />
+        </div>
+      </FacebookMessengerShareButton>
+      <EmailShareButton
+        url={'https://github.com/next-share'}
+        title={'Next Share'}
+        body="body"
+      >
+        <div style={{marginRight: 10, width: 32, height: 32}}>
+          <EmailIcon size={32} round />
+        </div>
+      </EmailShareButton>
     </div>
   )
 };
